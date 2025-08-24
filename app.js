@@ -1,7 +1,7 @@
 class PresentationApp {
     constructor() {
-        this.currentSlide = 1;
-        this.totalSlides = 8;
+    this.currentSlide = 1;
+    this.totalSlides = 9;
         this.slides = document.querySelectorAll('.slide');
         this.prevBtn = document.getElementById('prevBtn');
         this.nextBtn = document.getElementById('nextBtn');
@@ -364,7 +364,7 @@ class PresentationApp {
         this.updateNavigation();
         this.updateProgressBar();
         
-        // Trigger slide animations after transition
+    // Trigger slide animations after transition
         setTimeout(() => {
             this.isTransitioning = false;
             this.triggerSlideAnimations();
@@ -464,33 +464,54 @@ class PresentationApp {
             element.style.transform = this.getInitialTransform(element.dataset.animation);
         });
         
-        // Trigger animations based on slide type
+        // Trigger animations based on slide number (1..9)
         switch (this.currentSlide) {
             case 1:
-                this.animatePortada();
+                this.animateFirstPresentation();
                 break;
             case 2:
-                this.animateStages();
+                this.animatePortada();
                 break;
             case 3:
-                this.animateAutomationSlide();
+                this.animateStages();
                 break;
             case 4:
-                this.animateCharacteristics();
+                this.animateAutomationSlide();
                 break;
             case 5:
-                this.animateModels();
+                this.animateCharacteristics();
                 break;
             case 6:
-                this.animateFrameworks();
+                this.animateModels();
                 break;
             case 7:
-                this.animateConclusions();
+                this.animateFrameworks();
                 break;
             case 8:
+                this.animateConclusions();
+                break;
+            case 9:
                 this.animateReferences();
                 break;
+            default:
+                break;
         }
+
+    }
+
+    animateFirstPresentation() {
+        console.log('📘 Animando primera diapositiva de presentación');
+        const slide = document.querySelector('.primera-presentacion');
+        if (!slide) return;
+
+        // Simple fade-in for the first presentation slide
+        slide.style.opacity = '0';
+        slide.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+            slide.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+            slide.style.opacity = '1';
+            slide.style.transform = 'none';
+        }, 150);
     }
     
     getInitialTransform(animation) {

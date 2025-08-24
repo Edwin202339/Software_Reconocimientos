@@ -1014,6 +1014,43 @@ select.form-control {
   animation: labelFadeIn 1s ease-out 1s forwards;
 }
 
+/* Primera presentación: mejorar visibilidad del texto */
+.primera-presentacion .subtitle,
+.primera-presentacion .presentation-label,
+.primera-presentacion .institution-label,
+.primera-presentacion .year-label,
+.primera-presentacion p,
+.primera-presentacion .student-name,
+.primera-presentacion .group,
+.primera-presentacion .tutor,
+.primera-presentacion .institution,
+.primera-presentacion .school,
+.primera-presentacion .program,
+.primera-presentacion .course,
+.primera-presentacion .location,
+.primera-presentacion .year {
+  color: var(--color-text) !important;
+  opacity: 1 !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+}
+
+.primera-presentacion .student-name {
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+}
+
+.primera-presentacion .quality-icon {
+  /* make the student icon fully filled and visible */
+  -webkit-text-fill-color: var(--color-primary) !important;
+  background: none !important;
+  color: var(--color-primary) !important;
+}
+
+/* Ensure scrollable content still readable */
+.primera-presentacion .slide-content {
+  background: transparent;
+}
+
 /* Intro Text */
 .intro-text {
   font-size: var(--font-size-xl);

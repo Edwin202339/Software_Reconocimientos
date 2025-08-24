@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Base for GitHub Pages project site: ensures relative assets load from /Software_Reconocimientos/ -->
     <base href="/Software_Reconocimientos/">
+    <script>
+        // If running on localhost (Live Server / dev), adjust <base> so assets load from project root
+        (function() {
+            try {
+                const host = location.hostname;
+                if (host === '127.0.0.1' || host === 'localhost') {
+                    const b = document.querySelector('base');
+                    if (b) {
+                        b.setAttribute('href', './');
+                        console.log('Dev helper: <base> adjusted to ./ for local server');
+                    }
+                }
+            } catch (e) {
+                console.log('Error adjusting <base> for dev:', e);
+            }
+        })();
+    </script>
     <title>Calidad de Software - Presentación Profesional</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -30,14 +47,41 @@
 
         <!-- Slide Counter -->
         <div class="slide-counter">
-            <span id="currentSlide">1</span> / <span id="totalSlides">8</span>
+            <span id="currentSlide">1</span> / <span id="totalSlides">9</span>
         </div>
 
         <!-- Slides Container -->
         <div class="slides-container" id="slidesContainer">
             
-            <!-- Slide 1: Portada -->
+            <!-- Slide 1: Primera presentación (Tarea y datos) -->
             <div class="slide active" data-slide="1">
+                <div class="slide-content portada primera-presentacion">
+                    <div class="title-section">
+                        <h1 class="main-title">Tarea 1 - Reconocimiento de conceptos básicos</h1>
+                        <h2 class="subtitle">Proyecto colaborativo - Estudiantes</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                    <div class="logo-section">
+                        <div class="quality-icon-container">
+                            <i class="fas fa-user-graduate quality-icon"></i>
+                        </div>
+                    </div>
+                    <div class="date-section">
+                        <p class="student-name"><strong>EDWIN PANTOJA BUSTOS</strong></p>
+                        <p class="group">Grupo 202016900_95</p>
+                        <p class="tutor"><strong>Tutor</strong><br>Luis Eyder Ortiz Collazos</p>
+                        <p class="institution">UNIVERSIDAD NACIONAL ABIERTA Y A DISTANCIA – UNAD</p>
+                        <p class="school">ESCUELA DE CIENCIAS BÁSICAS TECNOLOGÍA E INGENIERA - ECBTI</p>
+                        <p class="program">INGENIERÍA DE SISTEMAS</p>
+                        <p class="course">Verificación y validación de software</p>
+                        <p class="location">BOGOTÁ D.C</p>
+                        <p class="year">2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Portada (original) -->
+            <div class="slide" data-slide="2">
                 <div class="slide-content portada">
                     <div class="title-section">
                         <h1 class="main-title">Calidad de Software</h1>
@@ -62,8 +106,8 @@
                 </div>
             </div>
 
-            <!-- Slide 2: Ciclo de Vida -->
-            <div class="slide" data-slide="2">
+            <!-- Slide 3: Ciclo de Vida -->
+            <div class="slide" data-slide="3">
                 <div class="slide-content">
                     <h1>El Ciclo de Vida del Desarrollo de Software</h1>
                     
@@ -169,8 +213,8 @@
                 </div>
             </div>
 
-            <!-- Slide 3: Automatización de Pruebas -->
-            <div class="slide" data-slide="3">
+            <!-- Slide 4: Automatización de Pruebas -->
+            <div class="slide" data-slide="4">
                 <div class="slide-content">
                     <h1>La Automatización de Pruebas de Software</h1>
                     
@@ -277,8 +321,8 @@
                 </div>
             </div>
 
-            <!-- Slide 4: Características Operativas -->
-            <div class="slide" data-slide="4">
+            <!-- Slide 5: Características Operativas -->
+            <div class="slide" data-slide="5">
                 <div class="slide-content">
                     <h1>Características Operativas de Calidad</h1>
                     <h2 class="subtitle">Modelo ISO/IEC 25010:2011</h2>
@@ -426,8 +470,8 @@
                 </div>
             </div>
 
-            <!-- Slide 5: Modelos de Calidad -->
-            <div class="slide" data-slide="5">
+            <!-- Slide 6: Modelos de Calidad -->
+            <div class="slide" data-slide="6">
                 <div class="slide-content">
                     <h1>Modelos de Calidad de Software</h1>
                     
@@ -619,8 +663,8 @@
                 </div>
             </div>
 
-            <!-- Slide 6: Marcos Normativos -->
-            <div class="slide" data-slide="6">
+            <!-- Slide 7: Marcos Normativos -->
+            <div class="slide" data-slide="7">
                 <div class="slide-content">
                     <h1>Marcos Normativos Relacionados con la Calidad de Software</h1>
                     
@@ -790,8 +834,8 @@
                 </div>
             </div>
 
-            <!-- Slide 7: Conclusiones -->
-            <div class="slide" data-slide="7">
+            <!-- Slide 8: Conclusiones -->
+            <div class="slide" data-slide="8">
                 <div class="slide-content">
                     <h1>Conclusiones</h1>
                     
@@ -933,8 +977,8 @@
                 </div>
             </div>
 
-            <!-- Slide 8: Referencias -->
-            <div class="slide" data-slide="8">
+            <!-- Slide 9: Referencias -->
+            <div class="slide" data-slide="9">
                 <div class="slide-content">
                     <h1>Referencias Bibliográficas</h1>
                     <h2 class="subtitle">Formato APA 7ª Edición</h2>

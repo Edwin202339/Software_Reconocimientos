@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calidad de Software - Presentación Profesional</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body data-color-scheme="light">
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+
+    <div class="presentation-container">
+        <!-- Navigation -->
+        <div class="navigation">
+            <button class="nav-btn" id="prevBtn" aria-label="Diapositiva anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="slide-indicators" id="slideIndicators"></div>
+            <button class="nav-btn" id="nextBtn" aria-label="Siguiente diapositiva">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <!-- Slide Counter -->
+        <div class="slide-counter">
+            <span id="currentSlide">1</span> / <span id="totalSlides">8</span>
+        </div>
+
+        <!-- Slides Container -->
+        <div class="slides-container" id="slidesContainer">
+            
+            <!-- Slide 1: Portada -->
+            <div class="slide active" data-slide="1">
+                <div class="slide-content portada">
+                    <div class="title-section">
+                        <h1 class="main-title">Calidad de Software</h1>
+                        <h2 class="subtitle">Ciclo de Vida, Automatización de Pruebas, Características Operativas, Modelos y Marcos Normativos</h2>
+                        <div class="title-underline"></div>
+                    </div>
+                    <div class="logo-section">
+                        <div class="quality-icon-container">
+                            <i class="fas fa-code quality-icon"></i>
+                            <div class="icon-orbit">
+                                <i class="fas fa-cog orbit-1"></i>
+                                <i class="fas fa-shield-alt orbit-2"></i>
+                                <i class="fas fa-chart-line orbit-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="date-section">
+                        <p class="presentation-label">Presentación Profesional</p>
+                        <p class="institution-label">Estudio Académico Avanzado</p>
+                        <p class="year-label">2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Ciclo de Vida -->
+            <div class="slide" data-slide="2">
+                <div class="slide-content">
+                    <h1>El Ciclo de Vida del Desarrollo de Software</h1>
+                    
+                    <p class="intro-text">El SDLC es un proceso sistemático que garantiza el desarrollo de software de alta calidad mediante 7 etapas bien definidas y estructuradas.</p>
+                    
+                    <div class="sdlc-container">
+                        <div class="benefits-box">
+                            <h3><i class="fas fa-chart-bar"></i> Beneficios Clave</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Reduce riesgos hasta 40%</li>
+                                <li><i class="fas fa-check"></i> Mejora comunicación entre equipos</li>
+                                <li><i class="fas fa-check"></i> Facilita estimación precisa</li>
+                                <li><i class="fas fa-check"></i> Asegura cumplimiento de requisitos</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="stages-grid">
+                            <div class="stage-card" data-animation="fadeInUp" data-delay="0">
+                                <div class="stage-header">
+                                    <div class="stage-number">1</div>
+                                    <h3>Planificación</h3>
+                                    <div class="stage-duration">10-15%</div>
+                                </div>
+                                <p class="stage-description">Definición de objetivos, recursos y cronograma del proyecto</p>
+                                <div class="stage-deliverables">
+                                    <strong>Entregables:</strong> Plan de proyecto, Análisis de viabilidad, Estimación de costos
+                                </div>
+                            </div>
+                            
+                            <div class="stage-card" data-animation="fadeInUp" data-delay="200">
+                                <div class="stage-header">
+                                    <div class="stage-number">2</div>
+                                    <h3>Análisis de Requisitos</h3>
+                                    <div class="stage-duration">15-20%</div>
+                                </div>
+                                <p class="stage-description">Recolección y documentación detallada de necesidades</p>
+                                <div class="stage-deliverables">
+                                    <strong>Entregables:</strong> SRS, Casos de uso, Criterios de aceptación
+                                </div>
+                            </div>
+                            
+                            <div class="stage-card" data-animation="fadeInUp" data-delay="400">
+                                <div class="stage-header">
+                                    <div class="stage-number">3</div>
+                                    <h3>Diseño</h3>
+                                    <div class="stage-duration">20-25%</div>
+                                </div>
+                                <p class="stage-description">Arquitectura del software e interfaces de usuario</p>
+                                <div class="stage-deliverables">
+                                    <strong>Entregables:</strong> Arquitectura del sistema, Diseño detallado, Prototipos
+                                </div>
+                            </div>
+                            
+                            <div class="stage-card" data-animation="fadeInUp" data-delay="600">
+                                <div class="stage-header">
+                                    <div class="stage-number">4</div>
+                                    <h3>Implementación</h3>
+                                    <div class="stage-duration">25-40%</div>
+                                </div>
+                                <p class="stage-description">Codificación siguiendo especificaciones y estándares</p>
+                                <div class="stage-deliverables">
+                                    <strong>Entregables:</strong> Código fuente, Documentación técnica, Módulos funcionales
+                                </div>
+                            </div>
+                            
+                            <div class="stage-card" data-animation="fadeInUp" data-delay="800">
+                                <div class="stage-header">
+                                    <div class="stage-number">5</div>
+                                    <h3>Pruebas</h3>
+                                    <div class="stage-duration">15-25%</div>
+                                </div>
+                                <p class="stage-description">Verificación y validación exhaustiva del sistema</p>
+                                <div class="stage-deliverables">
+                                    <strong>Entregables:</strong> Plan de pruebas, Casos de prueba, Reportes de defectos
+                                </div>
+                            </div>
+                            
+                            <div class="stage-card" data-animation="fadeInUp" data-delay="1000">
+                                <div class="stage-header">
+                                    <div class="stage-number">6</div>
+                                    <h3>Despliegue</h3>
+                                    <div class="stage-duration">5-10%</div>
+                                </div>
+                                <p class="stage-description">Implementación en producción y capacitación</p>
+                                <div class="stage-deliverables">
+                                    <strong>Entregables:</strong> Software en producción, Manual de usuario, Plan de implementación
+                                </div>
+                            </div>
+                            
+                            <div class="stage-card" data-animation="fadeInUp" data-delay="1200">
+                                <div class="stage-header">
+                                    <div class="stage-number">7</div>
+                                    <h3>Mantenimiento</h3>
+                                    <div class="stage-duration">60-80% post-launch</div>
+                                </div>
+                                <p class="stage-description">Soporte continuo, correcciones y mejoras</p>
+                                <div class="stage-deliverables">
+                                    <strong>Entregables:</strong> Actualizaciones, Parches, Reportes de soporte
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: Automatización de Pruebas -->
+            <div class="slide" data-slide="3">
+                <div class="slide-content">
+                    <h1>La Automatización de Pruebas de Software</h1>
+                    
+                    <div class="definition-card">
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="definition">La automatización de pruebas utiliza software especializado para controlar la ejecución de pruebas, comparar resultados reales con esperados y generar reportes detallados sin intervención manual.</p>
+                    </div>
+
+                    <div class="automation-content">
+                        <div class="benefits-section">
+                            <h3><i class="fas fa-chart-bar"></i> Beneficios Cuantificados</h3>
+                            <div class="benefits-stats">
+                                <div class="stat-item">
+                                    <div class="stat-circle" data-percent="75">
+                                        <span class="stat-number">0%</span>
+                                    </div>
+                                    <p class="stat-label">Eficiencia Temporal</p>
+                                    <div class="stat-description">Reducción en tiempo de ejecución</div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-circle" data-percent="95">
+                                        <span class="stat-number">0%</span>
+                                    </div>
+                                    <p class="stat-label">Precisión</p>
+                                    <div class="stat-description">Eliminación de errores humanos</div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-circle" data-percent="85">
+                                        <span class="stat-number">0%</span>
+                                    </div>
+                                    <p class="stat-label">Cobertura</p>
+                                    <div class="stat-description">Aumento en área de pruebas</div>
+                                </div>
+                                
+                                <div class="stat-item">
+                                    <div class="stat-circle" data-percent="300">
+                                        <span class="stat-number">0%</span>
+                                    </div>
+                                    <p class="stat-label">ROI</p>
+                                    <div class="stat-description">Retorno de inversión</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testing-types">
+                            <h3><i class="fas fa-cogs"></i> Tipos de Pruebas Automatizadas</h3>
+                            <div class="types-grid">
+                                <div class="type-card">
+                                    <div class="type-icon" style="background: var(--color-bg-1);">
+                                        <i class="fas fa-cube"></i>
+                                    </div>
+                                    <h4>Pruebas Unitarias</h4>
+                                    <p>Verifican componentes individuales del código</p>
+                                    <div class="tools-list">
+                                        <span class="tool-tag">JUnit</span>
+                                        <span class="tool-tag">NUnit</span>
+                                        <span class="tool-tag">Jest</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="type-card">
+                                    <div class="type-icon" style="background: var(--color-bg-2);">
+                                        <i class="fas fa-plug"></i>
+                                    </div>
+                                    <h4>Pruebas de Integración</h4>
+                                    <p>Validan interacción entre módulos</p>
+                                    <div class="tools-list">
+                                        <span class="tool-tag">TestNG</span>
+                                        <span class="tool-tag">Postman</span>
+                                        <span class="tool-tag">REST Assured</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="type-card">
+                                    <div class="type-icon" style="background: var(--color-bg-3);">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <h4>Pruebas de UI</h4>
+                                    <p>Automatizan interacción con interfaces</p>
+                                    <div class="tools-list">
+                                        <span class="tool-tag">Selenium</span>
+                                        <span class="tool-tag">Cypress</span>
+                                        <span class="tool-tag">Playwright</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="type-card">
+                                    <div class="type-icon" style="background: var(--color-bg-4);">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                    </div>
+                                    <h4>Pruebas de Rendimiento</h4>
+                                    <p>Evalúan comportamiento bajo carga</p>
+                                    <div class="tools-list">
+                                        <span class="tool-tag">JMeter</span>
+                                        <span class="tool-tag">LoadRunner</span>
+                                        <span class="tool-tag">k6</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Características Operativas -->
+            <div class="slide" data-slide="4">
+                <div class="slide-content">
+                    <h1>Características Operativas de Calidad</h1>
+                    <h2 class="subtitle">Modelo ISO/IEC 25010:2011</h2>
+                    
+                    <p class="intro-text">El estándar ISO/IEC 25010 define 8 características principales de calidad del producto software, cada una con múltiples subcaracterísticas específicas:</p>
+                    
+                    <div class="characteristics-container">
+                        <div class="characteristics-grid">
+                            <div class="characteristic-card" data-animation="zoomIn" data-delay="0">
+                                <div class="char-icon" style="color: #4F46E5;">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3>Adecuación Funcional</h3>
+                                <p>Grado en que el producto proporciona funciones que satisfacen necesidades declaradas e implícitas</p>
+                                <div class="subchars">
+                                    <span class="subchar">Completitud funcional</span>
+                                    <span class="subchar">Corrección funcional</span>
+                                    <span class="subchar">Pertinencia funcional</span>
+                                </div>
+                                <div class="char-progress">
+                                    <div class="progress-bar" data-width="90"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="characteristic-card" data-animation="zoomIn" data-delay="100">
+                                <div class="char-icon" style="color: #059669;">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <h3>Eficiencia de Desempeño</h3>
+                                <p>Desempeño relativo a la cantidad de recursos utilizados bajo condiciones determinadas</p>
+                                <div class="subchars">
+                                    <span class="subchar">Comportamiento temporal</span>
+                                    <span class="subchar">Utilización de recursos</span>
+                                    <span class="subchar">Capacidad</span>
+                                </div>
+                                <div class="char-progress">
+                                    <div class="progress-bar" data-width="85"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="characteristic-card" data-animation="zoomIn" data-delay="200">
+                                <div class="char-icon" style="color: #DC2626;">
+                                    <i class="fas fa-plug"></i>
+                                </div>
+                                <h3>Compatibilidad</h3>
+                                <p>Grado de intercambio de información con otros productos en el mismo entorno</p>
+                                <div class="subchars">
+                                    <span class="subchar">Coexistencia</span>
+                                    <span class="subchar">Interoperabilidad</span>
+                                </div>
+                                <div class="char-progress">
+                                    <div class="progress-bar" data-width="80"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="characteristic-card" data-animation="zoomIn" data-delay="300">
+                                <div class="char-icon" style="color: #7C3AED;">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3>Usabilidad</h3>
+                                <p>Grado de uso efectivo, eficiente y satisfactorio por usuarios específicos</p>
+                                <div class="subchars">
+                                    <span class="subchar">Reconocimiento</span>
+                                    <span class="subchar">Aprendizaje</span>
+                                    <span class="subchar">Operabilidad</span>
+                                    <span class="subchar">Protección errores</span>
+                                    <span class="subchar">Estética interfaz</span>
+                                    <span class="subchar">Accesibilidad</span>
+                                </div>
+                                <div class="char-progress">
+                                    <div class="progress-bar" data-width="95"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="characteristic-card" data-animation="zoomIn" data-delay="400">
+                                <div class="char-icon" style="color: #EA580C;">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h3>Fiabilidad</h3>
+                                <p>Grado de funcionamiento bajo condiciones específicas durante tiempo determinado</p>
+                                <div class="subchars">
+                                    <span class="subchar">Madurez</span>
+                                    <span class="subchar">Disponibilidad</span>
+                                    <span class="subchar">Tolerancia a fallos</span>
+                                    <span class="subchar">Recuperabilidad</span>
+                                </div>
+                                <div class="char-progress">
+                                    <div class="progress-bar" data-width="88"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="characteristic-card" data-animation="zoomIn" data-delay="500">
+                                <div class="char-icon" style="color: #BE123C;">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <h3>Seguridad</h3>
+                                <p>Grado de protección de información y datos contra acceso no autorizado</p>
+                                <div class="subchars">
+                                    <span class="subchar">Confidencialidad</span>
+                                    <span class="subchar">Integridad</span>
+                                    <span class="subchar">No repudio</span>
+                                    <span class="subchar">Responsabilidad</span>
+                                    <span class="subchar">Autenticidad</span>
+                                </div>
+                                <div class="char-progress">
+                                    <div class="progress-bar" data-width="92"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="characteristic-card" data-animation="zoomIn" data-delay="600">
+                                <div class="char-icon" style="color: #0891B2;">
+                                    <i class="fas fa-tools"></i>
+                                </div>
+                                <h3>Mantenibilidad</h3>
+                                <p>Eficacia y eficiencia de modificación por desarrolladores previstos</p>
+                                <div class="subchars">
+                                    <span class="subchar">Modularidad</span>
+                                    <span class="subchar">Reusabilidad</span>
+                                    <span class="subchar">Analizabilidad</span>
+                                    <span class="subchar">Modificabilidad</span>
+                                    <span class="subchar">Testeabilidad</span>
+                                </div>
+                                <div class="char-progress">
+                                    <div class="progress-bar" data-width="78"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="characteristic-card" data-animation="zoomIn" data-delay="700">
+                                <div class="char-icon" style="color: #65A30D;">
+                                    <i class="fas fa-exchange-alt"></i>
+                                </div>
+                                <h3>Portabilidad</h3>
+                                <p>Eficacia y eficiencia de transferencia entre entornos diferentes</p>
+                                <div class="subchars">
+                                    <span class="subchar">Adaptabilidad</span>
+                                    <span class="subchar">Instalabilidad</span>
+                                    <span class="subchar">Reemplazabilidad</span>
+                                </div>
+                                <div class="char-progress">
+                                    <div class="progress-bar" data-width="83"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 5: Modelos de Calidad -->
+            <div class="slide" data-slide="5">
+                <div class="slide-content">
+                    <h1>Modelos de Calidad de Software</h1>
+                    
+                    <p class="intro-text">Los modelos de calidad proporcionan marcos estructurados para evaluar y mejorar la calidad del software. Tres modelos fundamentales han establecido las bases conceptuales:</p>
+                    
+                    <div class="models-container">
+                        <div class="model-card" data-animation="slideInLeft" data-delay="0">
+                            <div class="model-header">
+                                <div class="model-info">
+                                    <h3>Modelo de McCall</h3>
+                                    <div class="model-year">1977</div>
+                                </div>
+                                <div class="model-icon">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                            </div>
+                            <p class="model-description">Pionero en evaluación sistemática, organizado en estructura jerárquica de tres niveles: factores, criterios y métricas.</p>
+                            
+                            <div class="model-stats">
+                                <div class="stat"><span class="number">11</span> Factores</div>
+                                <div class="stat"><span class="number">23</span> Criterios</div>
+                                <div class="stat"><span class="number">3</span> Categorías</div>
+                            </div>
+                            
+                            <div class="model-categories">
+                                <div class="category-group">
+                                    <h4>Operación del Producto</h4>
+                                    <div class="factors">
+                                        <span class="factor">Correctitud</span>
+                                        <span class="factor">Confiabilidad</span>
+                                        <span class="factor">Eficiencia</span>
+                                        <span class="factor">Integridad</span>
+                                        <span class="factor">Usabilidad</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="category-group">
+                                    <h4>Revisión del Producto</h4>
+                                    <div class="factors">
+                                        <span class="factor">Mantenibilidad</span>
+                                        <span class="factor">Flexibilidad</span>
+                                        <span class="factor">Testeabilidad</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="category-group">
+                                    <h4>Transición del Producto</h4>
+                                    <div class="factors">
+                                        <span class="factor">Portabilidad</span>
+                                        <span class="factor">Reusabilidad</span>
+                                        <span class="factor">Interoperabilidad</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="model-card" data-animation="slideInUp" data-delay="200">
+                            <div class="model-header">
+                                <div class="model-info">
+                                    <h3>Modelo de Boehm</h3>
+                                    <div class="model-year">1978</div>
+                                </div>
+                                <div class="model-icon">
+                                    <i class="fas fa-sitemap"></i>
+                                </div>
+                            </div>
+                            <p class="model-description">Jerarquía de características con énfasis en utilidad práctica y medición cuantitativa de calidad de software.</p>
+                            
+                            <div class="model-stats">
+                                <div class="stat"><span class="number">7</span> Características</div>
+                                <div class="stat"><span class="number">15</span> Primitivas</div>
+                                <div class="stat"><span class="number">3</span> Niveles</div>
+                            </div>
+                            
+                            <div class="boehm-hierarchy">
+                                <div class="hierarchy-level">
+                                    <h4>Uso General</h4>
+                                    <div class="characteristics">
+                                        <div class="char-item">
+                                            <strong>Portabilidad</strong>
+                                            <div class="subcriteria">
+                                                <span>Independencia del dispositivo</span>
+                                                <span>Completitud</span>
+                                                <span>Consistencia</span>
+                                            </div>
+                                        </div>
+                                        <div class="char-item">
+                                            <strong>Utilidad</strong>
+                                            <div class="subcriteria">
+                                                <span>Confiabilidad</span>
+                                                <span>Eficiencia</span>
+                                                <span>Facilidad de uso</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="hierarchy-level">
+                                    <h4>Mantenibilidad</h4>
+                                    <div class="characteristics">
+                                        <div class="char-item">
+                                            <strong>Comprensibilidad</strong>
+                                            <div class="subcriteria">
+                                                <span>Legibilidad</span>
+                                                <span>Estructuración</span>
+                                            </div>
+                                        </div>
+                                        <div class="char-item">
+                                            <strong>Modificabilidad</strong>
+                                            <div class="subcriteria">
+                                                <span>Modularidad</span>
+                                                <span>Simplicidad</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="model-card" data-animation="slideInRight" data-delay="400">
+                            <div class="model-header">
+                                <div class="model-info">
+                                    <h3>Modelo FURPS+</h3>
+                                    <div class="model-year">1987</div>
+                                </div>
+                                <div class="model-icon">
+                                    <i class="fas fa-cubes"></i>
+                                </div>
+                            </div>
+                            <p class="model-description">Desarrollado por Hewlett-Packard, clasifica requisitos en funcionales y no funcionales de manera clara y práctica.</p>
+                            
+                            <div class="model-stats">
+                                <div class="stat"><span class="number">5</span> Categorías</div>
+                                <div class="stat"><span class="number">+</span> Restricciones</div>
+                                <div class="stat"><span class="number">100%</span> Cobertura</div>
+                            </div>
+                            
+                            <div class="furps-categories">
+                                <div class="furps-item">
+                                    <div class="furps-letter">F</div>
+                                    <div class="furps-content">
+                                        <h4>Functionality</h4>
+                                        <p>Capacidades, características generales y seguridad</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="furps-item">
+                                    <div class="furps-letter">U</div>
+                                    <div class="furps-content">
+                                        <h4>Usability</h4>
+                                        <p>Factores humanos, estética, consistencia en interfaz</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="furps-item">
+                                    <div class="furps-letter">R</div>
+                                    <div class="furps-content">
+                                        <h4>Reliability</h4>
+                                        <p>Frecuencia y severidad de fallos, recuperación</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="furps-item">
+                                    <div class="furps-letter">P</div>
+                                    <div class="furps-content">
+                                        <h4>Performance</h4>
+                                        <p>Velocidad, eficiencia, disponibilidad, tiempo de respuesta</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="furps-item">
+                                    <div class="furps-letter">S</div>
+                                    <div class="furps-content">
+                                        <h4>Supportability</h4>
+                                        <p>Testeabilidad, extensibilidad, adaptabilidad</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="furps-item plus">
+                                    <div class="furps-plus">+</div>
+                                    <div class="furps-content">
+                                        <h4>Restricciones</h4>
+                                        <p>Restricciones de implementación, interfaz, operación</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Marcos Normativos -->
+            <div class="slide" data-slide="6">
+                <div class="slide-content">
+                    <h1>Marcos Normativos Relacionados con la Calidad de Software</h1>
+                    
+                    <p class="intro-text">Los marcos normativos establecen estándares internacionales y buenas prácticas para asegurar la calidad del software de manera sistemática y reconocida globalmente:</p>
+                    
+                    <div class="frameworks-container">
+                        <div class="framework-item" data-animation="fadeInUp" data-delay="0">
+                            <div class="framework-icon" style="background: linear-gradient(135deg, #4F46E5, #7C3AED);">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div class="framework-content">
+                                <h3>ISO/IEC 25000 <span class="framework-badge">SQuaRE</span></h3>
+                                <p><strong>Systems and Software Quality Requirements and Evaluation</strong> - Familia de estándares que proporciona marco completo para especificar y evaluar calidad de productos de software.</p>
+                                <div class="framework-details">
+                                    <div class="detail-section">
+                                        <h4>Estructura Principal</h4>
+                                        <ul>
+                                            <li>ISO/IEC 2500n - Gestión de Calidad</li>
+                                            <li>ISO/IEC 2501n - Modelo de Calidad</li>
+                                            <li>ISO/IEC 2502n - Medición de Calidad</li>
+                                            <li>ISO/IEC 2503n - Requisitos de Calidad</li>
+                                            <li>ISO/IEC 2504n - Evaluación de Calidad</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="framework-metrics">
+                                    <div class="metric">
+                                        <i class="fas fa-trophy"></i>
+                                        <span>Certificación Internacional</span>
+                                    </div>
+                                    <div class="metric">
+                                        <i class="fas fa-globe"></i>
+                                        <span>Reconocimiento Mundial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="framework-item" data-animation="fadeInUp" data-delay="200">
+                            <div class="framework-icon" style="background: linear-gradient(135deg, #059669, #10B981);">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div class="framework-content">
+                                <h3>IEEE Standards</h3>
+                                <p><strong>Institute of Electrical and Electronics Engineers</strong> - Conjunto integral de estándares que abarcan todo el ciclo de vida del desarrollo de software y sistemas.</p>
+                                <div class="framework-details">
+                                    <div class="detail-section">
+                                        <h4>Estándares Clave</h4>
+                                        <ul>
+                                            <li><strong>IEEE 830:</strong> Software Requirements Specifications</li>
+                                            <li><strong>IEEE 829:</strong> Software Test Documentation</li>
+                                            <li><strong>IEEE 1012:</strong> Verification and Validation</li>
+                                            <li><strong>IEEE 730:</strong> Software Quality Assurance</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="framework-metrics">
+                                    <div class="metric">
+                                        <i class="fas fa-file-alt"></i>
+                                        <span>Documentación Estandarizada</span>
+                                    </div>
+                                    <div class="metric">
+                                        <i class="fas fa-industry"></i>
+                                        <span>Adopción Industrial</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="framework-item" data-animation="fadeInUp" data-delay="400">
+                            <div class="framework-icon" style="background: linear-gradient(135deg, #DC2626, #EF4444);">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="framework-content">
+                                <h3>CMMI <span class="framework-level">Nivel 5</span></h3>
+                                <p><strong>Capability Maturity Model Integration</strong> - Marco de mejora de procesos que proporciona elementos esenciales para procesos organizacionales efectivos.</p>
+                                <div class="framework-details">
+                                    <div class="detail-section">
+                                        <h4>Niveles de Madurez</h4>
+                                        <div class="maturity-levels">
+                                            <div class="level-item">1. Inicial - Procesos impredecibles</div>
+                                            <div class="level-item">2. Gestionado - Procesos caracterizados</div>
+                                            <div class="level-item">3. Definido - Procesos estandarizados</div>
+                                            <div class="level-item">4. Gestionado Cuantitativamente</div>
+                                            <div class="level-item">5. Optimización - Mejora continua</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="framework-metrics">
+                                    <div class="metric">
+                                        <i class="fas fa-arrow-up"></i>
+                                        <span>Mejora Sistemática 25-30%</span>
+                                    </div>
+                                    <div class="metric">
+                                        <i class="fas fa-shield-check"></i>
+                                        <span>Reducción de Riesgos</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="framework-item" data-animation="fadeInUp" data-delay="600">
+                            <div class="framework-icon" style="background: linear-gradient(135deg, #7C3AED, #A855F7);">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <div class="framework-content">
+                                <h3>SPICE - ISO/IEC 15504</h3>
+                                <p><strong>Software Process Improvement and Capability Determination</strong> - Marco internacional para evaluación y mejora de procesos de desarrollo y mantenimiento de software.</p>
+                                <div class="framework-details">
+                                    <div class="detail-section">
+                                        <h4>Dimensiones de Evaluación</h4>
+                                        <ul>
+                                            <li><strong>Dimensión de Proceso:</strong> Define QUÉ se debe hacer</li>
+                                            <li><strong>Dimensión de Capacidad:</strong> Define QUÉ TAN BIEN se realizan</li>
+                                            <li>6 niveles de capacidad (0-5)</li>
+                                            <li>5 categorías de procesos principales</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="framework-metrics">
+                                    <div class="metric">
+                                        <i class="fas fa-search"></i>
+                                        <span>Evaluación Objetiva</span>
+                                    </div>
+                                    <div class="metric">
+                                        <i class="fas fa-target"></i>
+                                        <span>Mejora Dirigida</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="framework-item" data-animation="fadeInUp" data-delay="800">
+                            <div class="framework-icon" style="background: linear-gradient(135deg, #EA580C, #F97316);">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <div class="framework-content">
+                                <h3>ISO 9001:2015</h3>
+                                <p><strong>Quality Management Systems - Requirements</strong> - Estándar internacional que especifica requisitos para sistemas de gestión de calidad aplicables a cualquier organización.</p>
+                                <div class="framework-details">
+                                    <div class="detail-section">
+                                        <h4>7 Principios de Gestión de Calidad</h4>
+                                        <ul>
+                                            <li>Enfoque al cliente</li>
+                                            <li>Liderazgo organizacional</li>
+                                            <li>Participación del personal</li>
+                                            <li>Enfoque a procesos</li>
+                                            <li>Mejora continua</li>
+                                            <li>Toma de decisiones basada en evidencia</li>
+                                            <li>Gestión de relaciones</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="framework-metrics">
+                                    <div class="metric">
+                                        <i class="fas fa-award"></i>
+                                        <span>Reconocimiento Global</span>
+                                    </div>
+                                    <div class="metric">
+                                        <i class="fas fa-percentage"></i>
+                                        <span>Eficiencia Operativa +15-20%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: Conclusiones -->
+            <div class="slide" data-slide="7">
+                <div class="slide-content">
+                    <h1>Conclusiones</h1>
+                    
+                    <p class="intro-text"><strong>Síntesis Ejecutiva:</strong> La calidad del software es un aspecto multidimensional que requiere un enfoque integral y sistemático, combinando procesos estructurados, herramientas avanzadas y marcos normativos reconocidos internacionalmente.</p>
+                    
+                    <div class="conclusions-container">
+                        <div class="conclusion-item" data-animation="slideInLeft" data-delay="0">
+                            <div class="conclusion-icon">
+                                <i class="fas fa-sync-alt"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="conclusion-content">
+                                <h3>Ciclo de Vida del Desarrollo</h3>
+                                <p>El SDLC estructura el desarrollo mediante 7 etapas bien definidas que reducen riesgos hasta <strong>40%</strong> y aseguran cumplimiento de requisitos.</p>
+                                <div class="impact-metric">
+                                    <span class="metric-value">40%</span>
+                                    <span class="metric-label">Reducción de defectos en producción</span>
+                                </div>
+                                <div class="recommendation">
+                                    <strong>Recomendación:</strong> Implementar metodologías híbridas que combinen predictivas y ágiles según contexto del proyecto
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="conclusion-item" data-animation="slideInLeft" data-delay="200">
+                            <div class="conclusion-icon">
+                                <i class="fas fa-robot"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="conclusion-content">
+                                <h3>Automatización de Pruebas</h3>
+                                <p>La automatización incrementa eficiencia <strong>75%</strong>, reduce costos operativos <strong>60%</strong> y permite releases hasta <strong>10x más frecuentes</strong>.</p>
+                                <div class="impact-metrics-dual">
+                                    <div class="impact-metric">
+                                        <span class="metric-value">75%</span>
+                                        <span class="metric-label">Incremento eficiencia</span>
+                                    </div>
+                                    <div class="impact-metric">
+                                        <span class="metric-value">300%</span>
+                                        <span class="metric-label">ROI promedio</span>
+                                    </div>
+                                </div>
+                                <div class="recommendation">
+                                    <strong>Recomendación:</strong> Adoptar estrategia de automatización progresiva priorizando pruebas de regresión y APIs
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="conclusion-item" data-animation="slideInLeft" data-delay="400">
+                            <div class="conclusion-icon">
+                                <i class="fas fa-award"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="conclusion-content">
+                                <h3>Características ISO/IEC 25010</h3>
+                                <p>Las <strong>8 características operativas</strong> proporcionan marco integral y estandarizado para evaluación objetiva de calidad de productos software.</p>
+                                <div class="impact-metric">
+                                    <span class="metric-value">40%</span>
+                                    <span class="metric-label">Mayor satisfacción usuario final</span>
+                                </div>
+                                <div class="recommendation">
+                                    <strong>Recomendación:</strong> Establecer métricas específicas para cada característica según contexto y criticidad del sistema
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="conclusion-item" data-animation="slideInLeft" data-delay="600">
+                            <div class="conclusion-icon">
+                                <i class="fas fa-cubes"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="conclusion-content">
+                                <h3>Modelos de Calidad Complementarios</h3>
+                                <p>McCall (1977), Boehm (1978) y FURPS+ (1987) ofrecen perspectivas complementarias para evaluación <strong>multidimensional</strong> de la calidad.</p>
+                                <div class="impact-metric">
+                                    <span class="metric-value">3</span>
+                                    <span class="metric-label">Modelos fundamentales históricos</span>
+                                </div>
+                                <div class="recommendation">
+                                    <strong>Recomendación:</strong> Seleccionar modelo según fase: FURPS+ para requisitos, McCall para evaluación integral
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="conclusion-item" data-animation="slideInLeft" data-delay="800">
+                            <div class="conclusion-icon">
+                                <i class="fas fa-certificate"></i>
+                                <div class="icon-pulse"></div>
+                            </div>
+                            <div class="conclusion-content">
+                                <h3>Marcos Normativos Internacionales</h3>
+                                <p>Adopción de ISO 25000, IEEE, CMMI, SPICE e ISO 9001 proporciona reconocimiento internacional y excelencia operacional.</p>
+                                <div class="impact-metrics-dual">
+                                    <div class="impact-metric">
+                                        <span class="metric-value">35%</span>
+                                        <span class="metric-label">Mayor satisfacción cliente</span>
+                                    </div>
+                                    <div class="impact-metric">
+                                        <span class="metric-value">25%</span>
+                                        <span class="metric-label">Menor tasa defectos</span>
+                                    </div>
+                                </div>
+                                <div class="recommendation">
+                                    <strong>Recomendación:</strong> Implementar marcos progresivamente: ISO 9001 como base, luego marcos específicos según necesidades
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="strategic-insights">
+                        <h3><i class="fas fa-lightbulb"></i> Insights Estratégicos</h3>
+                        <div class="insights-grid">
+                            <div class="insight-item">
+                                <h4>Integración Holística</h4>
+                                <p>La calidad requiere integración inteligente de múltiples enfoques: procesos, herramientas, estándares y cultura organizacional.</p>
+                                <div class="business-value">50% mayor éxito en proyectos críticos</div>
+                            </div>
+                            
+                            <div class="insight-item">
+                                <h4>Evolución Tecnológica</h4>
+                                <p>Estándares evolucionan para incluir DevOps, Agile, Cloud Computing, AI/ML y desarrollo distribuido.</p>
+                                <div class="business-value">Ventaja competitiva sostenible</div>
+                            </div>
+                            
+                            <div class="insight-item">
+                                <h4>Factor Humano</h4>
+                                <p>Capacitación, cultura organizacional y compromiso siguen siendo determinantes críticos del éxito.</p>
+                                <div class="business-value">ROI 400% superior a inversión solo en herramientas</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="final-reflection" data-animation="fadeIn" data-delay="1200">
+                        <div class="reflection-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <p><strong>Reflexión Final:</strong> La calidad del software trasciende aspectos técnicos para convertirse en un <strong>diferenciador estratégico</strong> que impacta directamente en la experiencia del cliente, competitividad organizacional y sostenibilidad del negocio en la era digital.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 8: Referencias -->
+            <div class="slide" data-slide="8">
+                <div class="slide-content">
+                    <h1>Referencias Bibliográficas</h1>
+                    <h2 class="subtitle">Formato APA 7ª Edición</h2>
+                    
+                    <div class="references-container">
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="0">
+                            <div class="reference-number">1</div>
+                            <p>Bambu Mobile. (2024, julio 30). 7 Etapas del ciclo de desarrollo de software. <em>Bambu Mobile Blog</em>. https://bambu-mobile.com/ciclo-de-desarrollo-de-software/</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="100">
+                            <div class="reference-number">2</div>
+                            <p>Capability Maturity Model Integration (CMMI) Institute. (2018). <em>CMMI for Development, Version 2.0</em> (CMMI-DEV v2.0). Software Engineering Institute, Carnegie Mellon University.</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="200">
+                            <div class="reference-number">3</div>
+                            <p>EQA. (2024, julio 4). ISO/IEC 15504 SPICE. <em>EQA Certificación</em>. https://eqa.es/tecnologias-de-la-informacion/spice-iso-iec-15504</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="300">
+                            <div class="reference-number">4</div>
+                            <p>IEEE Computer Society. (2008). <em>IEEE Standard for Software and System Test Documentation</em> (IEEE Std 829-2008). Institute of Electrical and Electronics Engineers.</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="400">
+                            <div class="reference-number">5</div>
+                            <p>Innevo. (2024, agosto 29). Entendiendo la Calidad del Software: qué es, qué la compone y estándares principales. <em>Innevo Blog</em>. https://innevo.com/blog/calidad-en-el-desarrollo-de-software</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="500">
+                            <div class="reference-number">6</div>
+                            <p>International Organization for Standardization. (2011). <em>Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models</em> (ISO/IEC 25010:2011). ISO/IEC.</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="600">
+                            <div class="reference-number">7</div>
+                            <p>International Organization for Standardization. (2015). <em>Quality management systems — Requirements</em> (ISO 9001:2015). International Organization for Standardization.</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="700">
+                            <div class="reference-number">8</div>
+                            <p>McCall, J. A., Richards, P. K., & Walters, G. F. (1977). <em>Factors in Software Quality</em> (Vols. I, II, III). US Rome Air Development Center Reports NTIS AD/A-049 014, 015, 055.</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="800">
+                            <div class="reference-number">9</div>
+                            <p>MTP. (2024, abril 17). Optimizando la calidad del software con ISO 9001 y 25000. <em>MTP Testing Blog</em>. https://www.mtp.es/blog/testing-software/optimizando-calidad-software-con-iso-9001-25000/</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="900">
+                            <div class="reference-number">10</div>
+                            <p>Nivelics. (2023, septiembre 5). ¿Qué es la automatización de pruebas de software? <em>Nivelics Blog</em>. https://www.nivelics.com/blog/que-es-la-automatizacion-de-pruebas-de-software</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="1000">
+                            <div class="reference-number">11</div>
+                            <p>Platzi. (2025, enero 16). Atributos de calidad de un producto de software. <em>Platzi Blog</em>. https://platzi.com/blog/atributos-de-calidad-de-un-producto-de-software/</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="1100">
+                            <div class="reference-number">12</div>
+                            <p>Pressman, R. S., & Maxim, B. R. (2020). <em>Ingeniería del software: Un enfoque práctico</em> (9ª ed.). McGraw-Hill Education.</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="1200">
+                            <div class="reference-number">13</div>
+                            <p>Sommerville, I. (2019). <em>Software Engineering</em> (10th ed.). Pearson Education Limited.</p>
+                        </div>
+                        
+                        <div class="reference-item" data-animation="fadeInUp" data-delay="1300">
+                            <div class="reference-number">14</div>
+                            <p>Zaptest. (2022, julio 7). ¿Qué es la automatización de pruebas? Una guía sencilla y sin jerga. <em>Zaptest Blog</em>. https://www.zaptest.com/es/que-es-la-automatizacion-de-pruebas-una-guia-sencilla-y-sin-jerga</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
